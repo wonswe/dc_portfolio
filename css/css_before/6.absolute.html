@@ -13,6 +13,7 @@
         background-color: darkslategray;
       }
       .box {
+        position: relative;
         width: 80%;
         height: 80%;
         padding: 20px;
@@ -27,6 +28,12 @@
       }
       .inner2 {
         background-color: palegoldenrod;
+        position: absolute;
+        /* 기존 문서 flow 에서 빠져나온다.  */
+        /* absolute의 위치를 결정하는 기준은 부모에 맞춰지는데
+        가장 근접한 static이 아닌 relative인 부모를 기준으로 위치가 결정된다.*/
+        top: 80px;
+        left: 100px;
       }
       .inner3 {
         background-color: darkseagreen;
