@@ -160,3 +160,38 @@ button:focus {
   /* 컨텐츠 사이즈에 영향을 주지 않으면서 태두리를 적용할 수 있다. */
   color: var(--color-text);
 }
+
+/* About */
+.majors {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 2.5rem 0;
+}
+
+.major {
+  background-color: var(--color-primary-variant);
+  color: var(--color-text);
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+  cursor: default;
+  box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.38);
+  width: 400px;
+}
+
+.major:hover .major__icon {
+  transform: rotate(-15deg) scale(1.2);
+}
+
+.major__icon {
+  font-size: 4rem;
+  margin: 1rem 0;
+  color: var(--color-accent);
+  transition: all 300ms ease;
+}
+
+.major__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
