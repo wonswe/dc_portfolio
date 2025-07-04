@@ -96,3 +96,51 @@ button:focus {
   border: 1px solid var(--color-accent);
   border-radius: 4px;
 }
+
+/* Home */
+#home {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  padding: 5rem 1rem;
+  padding-top: 7rem;
+  text-align: center;
+}
+
+.home__avatar {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border: 3px solid var(--color-accent);
+  border-radius: 100%;
+}
+
+.home__title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.home__title--strong {
+  color: var(--color-accent);
+}
+
+.home__description {
+  font-size: 1.3rem;
+}
+
+.home__contact {
+  display: inline-block;
+  /* a 태그가 한 줄을 차지하지만 실제 백그라운드은 컨텐츠 사이즈에 맞춤 */
+  background-color: var(--color-accent);
+  color: var(--color-black);
+  margin: 2rem;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.home__contact:hover {
+  background-color: transparent;
+  outline: 2px solid var(--color-accent);
+  /* 컨텐츠 사이즈에 영향을 주지 않으면서 태두리를 적용할 수 있다. */
+  color: var(--color-text);
+}
