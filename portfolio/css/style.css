@@ -223,3 +223,14 @@ button:focus {
   color: var(--color-primary);
   font-size: 0.8rem;
 }
+
+/* Skills */
+#skills {
+  background-color: var(--color-primary-variant);
+  color: var(--color-text);
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: 6fr 4fr;
+}
