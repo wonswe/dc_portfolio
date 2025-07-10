@@ -36,3 +36,5 @@ function filterProjects(filter) {
     projectsContainer.classList.remove('anim-out');
   }, 250);
 }
+
+// Intersection Observer
