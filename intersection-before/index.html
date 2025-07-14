@@ -46,14 +46,32 @@
     <div class="box">20</div>
 
     <script>
+      // 1. create an instance of IntersectionObserver class,
+      // + 관찰할 때마다 호출하기 원하는 콜백함수를 전달
       const observer = new IntersectionObserver(callback);
+
+      // 2. querySelectorAll로 .box 클래스를 가진 모든 요소를 불러온다.
       const boxes = document.querySelectorAll('.box');
+
+      // 3. 각 .box 요소에 개별적으로 observe라는 함수 호출
       boxes.forEach((box) => observer.observe(box))
 
+      // 4. 이 콜백함수는 처음으로 관찰하기 시작한 순간에 모든 요소들을 호출,
+      // 화면에서 사라지거나 진입할 때마다 콜백함수가 호출이 된다.
       function callback(entries) {
+        // entries는 변경사항이 발생한 요소들을 배열로 전달해준다.
         entries.forEach(entry => {
+          // 전달된 배열을 forEach로 하나씩 순회하면서 entry의 상태에 따라
+          // isIntersecting인지 등 파악
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active')
+          } else {
+            entry.target.classList.remove('active');
+          }
           console.log(entry);
-
+          console.log(entry.target);
+          console.log(entry.isIntersecting);
+          console.log(entry.intersectionRatio);
         })
       }
     </script>
