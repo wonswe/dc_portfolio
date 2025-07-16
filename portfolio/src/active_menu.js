@@ -30,9 +30,21 @@ function observerCallback(entries) {
     const index = sectionIds.indexOf(`#${entry.target.id}`);
     visibleSections[index] = entry.isIntersecting;
     selectLastOne =
-      index === sectionIds.length - 1 &&
-      entry.isIntersecting &&
-      entry.IntersectionRatio >= 0.99;
+      index === sectionIds.length - 1 && // 마지막 인덱스이고
+      entry.isIntersecting && // 보여지고 있고
+      entry.intersectionRatio >= 0.99; // 99% 보여지고 있으면
+    // selectLastOne = True, 하나라도 안맞으면 False
   });
   console.log(visibleSections);
+  console.log('무조건 라스트 섹션!', selectLastOne);
+
+  const navIndex = selectLastOne
+    ? sectionIds.length - 1
+    : findFirstIntersecting(visibleSections);
+  console.log(sectionIds[navIndex]);
+}
+
+function findFirstIntersecting(visibleSections) {
+  const index = visibleSections.indexOf(true);
+  return index >= 0 ? index : 0;
 }
