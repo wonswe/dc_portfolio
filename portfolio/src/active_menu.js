@@ -36,7 +36,7 @@ function observerCallback(entries) {
     selectLastOne =
       index === sectionIds.length - 1 && // 마지막 인덱스이고
       entry.isIntersecting && // 보여지고 있고
-      entry.intersectionRatio >= 0.99; // 99% 보여지고 있으면
+      entry.intersectionRatio >= 0.95; // 95% 보여지고 있으면
     // selectLastOne = True, 하나라도 안맞으면 False
   });
   console.log(visibleSections);
