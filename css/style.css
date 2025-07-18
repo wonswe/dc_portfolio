@@ -7,6 +7,13 @@
   --color-accent-variant: var(--color-orange);
   --color-text: var(--color-white);
 
+  /* Background */
+  --home-bg-gradient: linear-gradient(
+    180deg,
+    rgba(8, 26, 60, 1) 0%,
+    rgba(5, 10, 19, 1) 100%
+  );
+
   /* Colors */
   --color-white: #ffffff;
   --color-black: #050a13;
@@ -152,6 +159,7 @@ button:focus {
 #home {
   position: relative;
   background-color: var(--color-primary);
+  background: var(--home-bg-gradient);
   color: var(--color-text);
   padding: 5rem 1rem;
   padding-top: 7rem;
